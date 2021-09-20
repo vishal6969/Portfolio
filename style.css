@@ -1,46 +1,75 @@
 body{
     margin: 0px;
-    background-color:aliceblue ;
+}
+
+/* home page */
+#home{
+    background-image: linear-gradient(to bottom,aliceblue,bisque);
+    height: 600px;
+    width: 100%;
+    padding-bottom: 8%;
 }
 .navbar{
     position: fixed;
     width: 100%;
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-left:auto;
     background-color:bisque;
     border: 2px double black;
     padding-left: 20%;
 }
 .navbar a{
-
     text-decoration: none;
     font-size: 1.5em;
     margin: 15px;
     color: rgb(30,50,30);
 }
-
-img{
-    margin-left: 4%;
-    margin-top:6%;
+a:hover {
+    text-decoration: underline;
+}
+.image {
+    text-align: center;
+}
+.image img{
+    margin-top: 4%;
     height: 25%;
     width: 15%;
     border: 2px double black;
     border-radius: 50%;
 }
-.profile {
-    border: 1px solid black;
-    display:inline-block;
-    font-family:Arial, Helvetica, sans-serif;
+.welcome {
+    width: 100%;
+    text-align: center;
+    font-family:cursive;
 }
-.image{
-    display: inline;
-}
-.details{
-    position: absolute;
-    text-align: left;
-    top: 13%;
-    left:22%;
-}
-.education{
-    margin-left: 4%;
+
+/* know me page */
+#know { 
     margin-top: 5%;
+    height: 100%;
+    display: flex;
+}
+.bio {
+    padding: 2%;
+    text-align: center;
+    margin-left: 2%;
+    width: 25%;
+    border: 1px solid black;
+}
+.school {
+    padding: 2%;
+    text-align: center;
+    margin-left: 5%;
+    width: 25%;
+    border: 1px solid black;
+}
+.college {
+    padding: 2%;
+    text-align: center;
+    margin-left: 5%;
+    width: 25%;
+    border: 1px solid black;
+}
+.college:hover,.school:hover,.bio:hover {
+    box-shadow: 5px -5px bisque;
 }
