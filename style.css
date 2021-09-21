@@ -24,7 +24,7 @@ body{
     margin: 15px;
     color: rgb(30,50,30);
 }
-a:hover {
+.navbar a:hover {
     text-decoration: underline;
 }
 .image {
@@ -72,19 +72,97 @@ a:hover {
     height: 500px;
     border: 2px solid black;
 }
-/* know me page */
-#know { 
-    margin-top: 5%;
+#project #description {
+    width: 80%;
+    margin-left: 8%;
+    font-size: 1.5em;
+    font-family: cursive;
+}
+
+/* shopping page */
+#shop {
+    margin-top: 15%;
     height: 100%;
     display: flex;
+}
+#shop p span {
+    float: right;
+    margin-right: 5%;
+}
+#shop p label {
+    color:purple;
+}
+#shop .standard, .basic, .premium {
+    text-align: center;
+    width: 25%;
+    margin-left: 6%;
+    font-size: 1.2em;
+    border-top-left-radius: 10%;
+    background-image: radial-gradient(circle, skyblue,bisque);
+}
+/* know me page */
+#know { 
+    margin-top: 25%;
+    height: 100%;
+    
 }
 .bio, .school, .college {
     padding: 2%;
     text-align: center;
+    font-size: 1.2em;
     margin-left: 3%;
+    margin-top: 10%;
     width: 25%;
     border: 1px solid black;
 }
+.bio label {
+    float: left;
+}
 .college:hover,.school:hover,.bio:hover {
     box-shadow: 5px -5px bisque;
+}
+
+@keyframes div1 {
+    from {margin-left: 100%;}
+    to {margin-left: 0%;}
+}
+@keyframes div2 {
+    from {margin-right: 100%;}
+    to {margin-right: 0%;}
+}
+
+.bio, .college {
+    animation-name: div1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+.school {
+    animation-name: div2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+/* contact page */
+#contact {
+    padding: 10% 3% 10% 3%;
+    margin-top: 15%;
+    font-size: 1.2em;
+    background-color:aqua;
+    display: flex;
+}
+#contact span {
+    color: blue;
+}
+.useful i {
+    font-size: 1.1em;
+}
+.useful {
+    margin-left: 30%;
+}
+.useful a {
+    text-decoration: none;
+    color: rgb(30,50,30);
+}
+.useful a:hover {
+    text-decoration: underline;
 }

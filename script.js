@@ -1,3 +1,5 @@
+// import  {description}  from "./description.js";
+
 // welcome message Animation
 var message = "<h1>Hey There👋</h1><h2>Welcome to My world.</h2><h2>Explore it in your own way...</h2><h2>And if you like it,</h2><h2>I can create one for you as well😁</h2>";
 var temp = "";
@@ -25,6 +27,7 @@ var arr = ["https://vishal6969.github.io/Game-Zone",
 "https://vishal6969.github.io/canvas_clock"];
 
 var frame = document.querySelector("iframe");
+var para = document.querySelector("#description");
 var index1 = 0;
 
 //function to set url of frames
@@ -32,8 +35,8 @@ function urlSetter(i) {
     if(i < 0 || i >= arr.length) {
         return;
     }
-    frame.src = "";
     frame.src = arr[i];
+    para.innerHTML = description[i];
     index1 = i;
 }
 urlSetter(index1);
@@ -54,3 +57,5 @@ document.querySelector("#btn1").addEventListener("mousedown",function(e){
 document.querySelector("#btn2").addEventListener("mousedown",function(e){
     e.preventDefault();
 });
+
+
