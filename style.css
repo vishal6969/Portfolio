@@ -43,30 +43,45 @@ a:hover {
     font-family:cursive;
 }
 
+/* project gallery */
+#project {
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+.frame {
+    display: flex;
+    align-items: center;
+}
+#btn1:hover, #btn2:hover {
+    cursor: pointer;
+}
+#btn1 {
+    margin-right: 5%;
+    margin-left: 3%;
+    font-size: 3em;
+    font-weight:bolder;
+}
+#btn2 {
+    margin-left: 5%;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#project iframe{
+    width : 80%;
+    height: 500px;
+    border: 2px solid black;
+}
 /* know me page */
 #know { 
     margin-top: 5%;
     height: 100%;
     display: flex;
 }
-.bio {
+.bio, .school, .college {
     padding: 2%;
     text-align: center;
-    margin-left: 2%;
-    width: 25%;
-    border: 1px solid black;
-}
-.school {
-    padding: 2%;
-    text-align: center;
-    margin-left: 5%;
-    width: 25%;
-    border: 1px solid black;
-}
-.college {
-    padding: 2%;
-    text-align: center;
-    margin-left: 5%;
+    margin-left: 3%;
     width: 25%;
     border: 1px solid black;
 }
