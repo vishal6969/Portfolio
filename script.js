@@ -57,5 +57,3 @@ document.querySelector("#btn1").addEventListener("mousedown",function(e){
 document.querySelector("#btn2").addEventListener("mousedown",function(e){
     e.preventDefault();
 });
-
-

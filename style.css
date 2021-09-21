@@ -1,168 +1,357 @@
 body{
     margin: 0px;
+    padding: 0px;
 }
 
-/* home page */
-#home{
-    background-image: linear-gradient(to bottom,aliceblue,bisque);
-    height: 600px;
-    width: 100%;
-    padding-bottom: 8%;
-}
-.navbar{
-    position: fixed;
-    width: 100%;
-    margin-top: 1%;
-    margin-left:auto;
-    background-color:bisque;
-    border: 2px double black;
-    padding-left: 20%;
-}
-.navbar a{
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 15px;
-    color: rgb(30,50,30);
-}
-.navbar a:hover {
-    text-decoration: underline;
-}
-.image {
-    text-align: center;
-}
-.image img{
-    margin-top: 4%;
-    height: 25%;
-    width: 15%;
-    border: 2px double black;
-    border-radius: 50%;
-}
-.welcome {
-    width: 100%;
-    text-align: center;
-    font-family:cursive;
-}
-
-/* project gallery */
-#project {
-    margin-top: 5%;
-    width: 100%;
-    text-align: center;
-}
-.frame {
-    display: flex;
-    align-items: center;
-}
-#btn1:hover, #btn2:hover {
-    cursor: pointer;
-}
-#btn1 {
-    margin-right: 5%;
-    margin-left: 3%;
-    font-size: 3em;
-    font-weight:bolder;
-}
-#btn2 {
-    margin-left: 5%;
-    font-size: 3em;
-    font-weight: bolder;
-}
-#project iframe{
-    width : 80%;
-    height: 500px;
-    border: 2px solid black;
-}
-#project #description {
-    width: 80%;
-    margin-left: 8%;
-    font-size: 1.5em;
-    font-family: cursive;
-}
-
-/* shopping page */
-#shop {
-    margin-top: 15%;
-    height: 100%;
-    display: flex;
-}
-#shop p span {
-    float: right;
-    margin-right: 5%;
-}
-#shop p label {
-    color:purple;
-}
-#shop .standard, .basic, .premium {
-    text-align: center;
-    width: 25%;
-    margin-left: 6%;
-    font-size: 1.2em;
-    border-top-left-radius: 10%;
-    background-image: radial-gradient(circle, skyblue,bisque);
-}
-/* know me page */
-#know { 
-    margin-top: 25%;
-    height: 100%;
+/* for mobile */
+@media screen and (max-width:450px) {
+    body{
+        margin: 0px;
+    }
+    
+    /* home page */
+    #home{
+        background-image: linear-gradient(to bottom,aliceblue,bisque);
+        height: 600px;
+        width: 120%;
+        padding-bottom: 8%;
+    }
+    .navbar a{
+        text-decoration: none;
+        font-size: 1.5em;
+        margin: 15px;
+        color: rgb(30,50,30);
+        display: none;
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+    .image {
+        text-align: center;
+    }
+    .image img{
+        margin-top: 5%;
+        height: 150px;
+        width: 150px;
+        border: 2px double black;
+        border-radius: 50%;
+    }
+    .welcome {
+        width: 100%;
+        text-align: center;
+        font-family:cursive;
+    }
+    
+    /* project gallery */
+    #project {
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    .frame {
+        display: flex;
+        align-items: center;
+    }
+    #btn1:hover, #btn2:hover {
+        cursor: pointer;
+    }
+    #btn1 {
+        margin-right: 5%;
+        margin-left: 3%;
+        font-size: 3em;
+        font-weight:bolder;
+    }
+    #btn2 {
+        margin-left: 5%;
+        font-size: 3em;
+        font-weight: bolder;
+    }
+    #project iframe{
+        width : 80%;
+        height: 500px;
+        border: 2px solid black;
+    }
+    #project #description {
+        width: 80%;
+        margin-left: 8%;
+        font-size: 1.2em;
+        font-family: cursive;
+    }
+    
+    /* shopping page */
+    #shop {
+        margin-top: 15%;
+        height: 100%;
+    }
+    #shop p span {
+        float: right;
+        margin-right: 5%;
+    }
+    #shop p label {
+        color:purple;
+    }
+    #shop .standard, .basic, .premium {
+        text-align: center;
+        width: 100%;
+        margin-left: 6%;
+        font-size: 1.2em;
+        border-top-left-radius: 10%;
+        background-image: radial-gradient(circle, skyblue,bisque);
+    }
+    /* know me page */
+    #know { 
+        margin-top: 25%;
+        height: 100%;
+    }
+    .bio, .school, .college {
+        padding: 2%;
+        text-align: center;
+        font-size: 1.2em;
+        margin-left: 3%;
+        margin-top: 10%;
+        width: 100%;
+        border: 1px solid black;
+        background-color: aquamarine;
+    }
+    .bio label {
+        float: left;
+    }
+    .college:hover,.school:hover,.bio:hover {
+        box-shadow: 5px -5px bisque;
+    }
+    
+    @keyframes div1 {
+        from {margin-left: 100%;}
+        to {margin-left: 0%;}
+    }
+    @keyframes div2 {
+        from {margin-right: 100%;}
+        to {margin-right: 0%;}
+    }
+    
+    .bio, .college {
+        animation-name: div1;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+    .school {
+        animation-name: div2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+    
+    /* contact page */
+    #contact {
+        padding: 10% 3% 10% 3%;
+        margin-top: 15%;
+        font-size: 1.2em;
+        background-color:aqua;
+        width: 100%;
+    }
+    #contact span {
+        color: blue;
+    }
+    .useful i {
+        font-size: 1.1em;
+    }
+    .useful {
+        margin-top: 30%;
+    }
+    .useful a {
+        text-decoration: none;
+        color: rgb(30,50,30);
+    }
+    .useful a:hover {
+        text-decoration: underline;
+    }
+    .social{
+        background-color:gold;
+        width: 100%;
+    }
+    .social img {
+        height: 45px;
+        width: 45px;
+        margin: 0% 5% 0% 5%;
+        border-radius: 50%;
+    }
     
 }
-.bio, .school, .college {
-    padding: 2%;
-    text-align: center;
-    font-size: 1.2em;
-    margin-left: 3%;
-    margin-top: 10%;
-    width: 25%;
-    border: 1px solid black;
-}
-.bio label {
-    float: left;
-}
-.college:hover,.school:hover,.bio:hover {
-    box-shadow: 5px -5px bisque;
-}
 
-@keyframes div1 {
-    from {margin-left: 100%;}
-    to {margin-left: 0%;}
-}
-@keyframes div2 {
-    from {margin-right: 100%;}
-    to {margin-right: 0%;}
-}
-
-.bio, .college {
-    animation-name: div1;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-}
-.school {
-    animation-name: div2;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-}
-
-/* contact page */
-#contact {
-    padding: 10% 3% 10% 3%;
-    margin-top: 15%;
-    font-size: 1.2em;
-    background-color:aqua;
-    display: flex;
-}
-#contact span {
-    color: blue;
-}
-.useful i {
-    font-size: 1.1em;
-}
-.useful {
-    margin-left: 30%;
-}
-.useful a {
-    text-decoration: none;
-    color: rgb(30,50,30);
-}
-.useful a:hover {
-    text-decoration: underline;
+/* for desktop  */
+@media (min-width: 750px) and (max-width: 1400px) {
+    /* home page */
+    #home{
+        background-image: linear-gradient(to bottom,aliceblue,bisque);
+        height: 600px;
+        width: 100%;
+        padding-bottom: 8%;
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+        margin-top: 1%;
+        margin-left:auto;
+        background-color:bisque;
+        border: 2px double black;
+        padding-left: 20%;
+    }
+    .navbar a{
+        text-decoration: none;
+        font-size: 1.5em;
+        margin: 15px;
+        color: rgb(30,50,30);
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+    .image {
+        text-align: center;
+    }
+    .image img{
+        margin-top: 4%;
+        height: 25%;
+        width: 15%;
+        border: 2px double black;
+        border-radius: 50%;
+    }
+    .welcome {
+        width: 100%;
+        text-align: center;
+        font-family:cursive;
+    }
+    
+    /* project gallery */
+    #project {
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    .frame {
+        display: flex;
+        align-items: center;
+    }
+    #btn1:hover, #btn2:hover {
+        cursor: pointer;
+    }
+    #btn1 {
+        margin-right: 5%;
+        margin-left: 3%;
+        font-size: 3em;
+        font-weight:bolder;
+    }
+    #btn2 {
+        margin-left: 5%;
+        font-size: 3em;
+        font-weight: bolder;
+    }
+    #project iframe{
+        width : 80%;
+        height: 500px;
+        border: 2px solid black;
+    }
+    #project #description {
+        width: 80%;
+        margin-left: 8%;
+        font-size: 1.5em;
+        font-family: cursive;
+    }
+    
+    /* shopping page */
+    #shop {
+        margin-top: 15%;
+        height: 100%;
+        display: flex;
+    }
+    #shop p span {
+        float: right;
+        margin-right: 5%;
+    }
+    #shop p label {
+        color:purple;
+    }
+    #shop .standard, .basic, .premium {
+        text-align: center;
+        width: 25%;
+        margin-left: 6%;
+        font-size: 1.2em;
+        border-top-left-radius: 10%;
+        background-image: radial-gradient(circle, skyblue,bisque);
+    }
+    /* know me page */
+    #know { 
+        margin-top: 25%;
+        height: 100%;
+        
+    }
+    .bio, .school, .college {
+        padding: 2%;
+        text-align: center;
+        font-size: 1.2em;
+        margin-left: 3%;
+        margin-top: 10%;
+        width: 25%;
+        border: 1px solid black;
+        background-color: aquamarine;
+    }
+    .bio label {
+        float: left;
+    }
+    .college:hover,.school:hover,.bio:hover {
+        box-shadow: 5px -5px bisque;
+    }
+    
+    @keyframes div1 {
+        from {margin-left: 100%;}
+        to {margin-left: 0%;}
+    }
+    @keyframes div2 {
+        from {margin-right: 100%;}
+        to {margin-right: 0%;}
+    }
+    
+    .bio, .college {
+        animation-name: div1;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+    .school {
+        animation-name: div2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+    
+    /* contact page */
+    #contact {
+        padding: 10% 3% 10% 3%;
+        margin-top: 15%;
+        font-size: 1.2em;
+        background-color:aqua;
+        display: flex;
+    }
+    #contact span {
+        color: blue;
+    }
+    .useful i {
+        font-size: 1.1em;
+    }
+    .useful {
+        margin-left: 30%;
+    }
+    .useful a {
+        text-decoration: none;
+        color: rgb(30,50,30);
+    }
+    .useful a:hover {
+        text-decoration: underline;
+    }
+    .social{
+        background-color:gold;
+    }
+    .social img {
+        height: 45px;
+        width: 45px;
+        margin: 0% 10% 0% 10%;
+        border-radius: 50%;
+    }
+    
 }
